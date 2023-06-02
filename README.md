@@ -1,25 +1,7 @@
 # GSG-React-Bootcamp-Hebron-University
 
-## Day 1
+## [Day 1](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Hebron-University/blob/main/Day1/README.md)
+## Day 2 
+## Day 3 
+## Day 4 
 
-  * **Types of data (Primitive types , object types)**
-  * **Objects**
-  ## **ES6 Fundamentals**
-  * **var , let, const**
-  * **Arrays**
-  * **Array method**
-  * **Template Literals**
-  * **Arrow functions**
-
-## Day 2 : 
-* Practical Example: Building a Simple TODO App
-* Introduction to React
-
-
-## Day 3 : 
-* Setting up a new React project using Create React App
-* Understanding React components and JSX syntax
-* Introduction to state and props
-
-## Day 4 : 
-* Practical Example : Convert TODO App to React 
