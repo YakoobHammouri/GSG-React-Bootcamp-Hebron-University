@@ -22,7 +22,7 @@ In JavaScript, there are two main categories of data types: **primitive types** 
   * Use ***var*** for variables with function scope or global scope (although it's generally recommended to avoid using var).
   * Use ***let*** for variables that need block scope and may have their values reassigned.
   * Use ***const*** for variables that need block scope and read onle values
-      ```jsx=
+      ```jsx
       function example() {
       const x = 10;
       if (true) {
@@ -36,13 +36,13 @@ In JavaScript, there are two main categories of data types: **primitive types** 
 
         console.log(x); // Error: x is not defined
         console.log(y); // Error: y is not defined
-
+      ```
 
 * **Work with Objects**
 JavaScript objects are complex data structures that allow developers to store and access data in a key-value format.
     * **create object**
     Objects can be created using the object literal syntax **({})**
-        ```jsx=
+        ```jsx
         const person = {
            name: "yakoob",
            age: 30,
@@ -52,13 +52,13 @@ JavaScript objects are complex data structures that allow developers to store an
   * **Accessing Object Properties**
     You can access object properties using dot notation **(.)** or bracket notation **([])**.
 
-    ```jsx=
+    ```jsx
     console.log(person.name);  // Output: "yakoob"
     console.log(person["age"]);  // Output: 30
     ```
   * **Adding Object Properties**
    you can add new properties to an object by assigning a value to a new or existing key.
-    ```jsx=
+    ```jsx
         person["address"] ={city : "hebron" , street: "123 Main St"};
 
         console.log(person);
@@ -75,7 +75,7 @@ JavaScript objects are complex data structures that allow developers to store an
 
   * **Deleting Object Properties**
     You can remove properties from an object using the delete keyword.
-    ```jsx=
+    ```jsx
     delete person.age;
 
     console.log(person);
@@ -93,9 +93,9 @@ JavaScript objects are complex data structures that allow developers to store an
 * **Functions**
  In JavaScript, functions are a fundamental concept that allows you to group and organize blocks of reusable code. Functions are a way to encapsulate logic and perform specific tasks when called or invoked. They can take input values, called parameters or arguments, and optionally return a value.
 
-    1. ***Function Declarations:***
+    1. **Function Declarations:**
     A function declaration defines a named function using the function keyword.
-        ```jsx=
+        ```jsx
         function functionName(parameters) {
           // Function body
         }
@@ -111,7 +111,7 @@ JavaScript objects are complex data structures that allow developers to store an
         ```
    2. **Function Expression**
       which is an anonymous function assigned to the variable.
-        ```jsx=
+        ```jsx
             const functionName = function(parameters) {
               // Function body
             };
@@ -123,7 +123,7 @@ JavaScript objects are complex data structures that allow developers to store an
          ```
     3. **Nested Functions**
     JavaScript allows functions to be defined inside other functions, known as nested functions or inner functions and can returns the inner function as reference
-    ```jsx=
+    ```jsx
     function upper() {
       console.log("upper");
 
@@ -255,12 +255,12 @@ array is a special type of object that allows you to store a collection of value
 In JavaScript, arrow functions were introduced in ES6 as a new way to write functions with Shorter Function Syntax and Implicit Return
 
      * **function declarations**
-        ```jsx=
+        ```jsx
         const functionName = (parameters) => {
           // Function body
         };
         ```
-        ```jsx=
+        ```jsx
         function double (number)
         {
           return number * 2;
