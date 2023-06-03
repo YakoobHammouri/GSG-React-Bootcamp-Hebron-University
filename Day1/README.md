@@ -154,9 +154,9 @@ array is a special type of object that allows you to store a collection of value
     
     // using new
     const days = new Array();
-    fruits[0] = 'Saturday';
-    fruits[1] = 'Sunday';
-    fruits[2] = 'Monday';
+    days[0] = 'Saturday';
+    days[1] = 'Sunday';
+    days[2] = 'Monday';
     
     // built in array
     
@@ -173,7 +173,7 @@ array is a special type of object that allows you to store a collection of value
      // access its elements using the index number.
      
      console.log(numbers[2]); // Output: 3
-     console.log(fruits[0]); // Output: "foo"
+     console.log(days[0]); // Output: "Saturday"
 
     ```
 * **Arrays Method**
