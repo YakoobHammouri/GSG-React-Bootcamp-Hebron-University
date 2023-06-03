@@ -1,3 +1,3 @@
 # React js Bootcamp Hebron 
 
-## Day 1
+## Day 2
