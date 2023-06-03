@@ -179,6 +179,7 @@ array is a special type of object that allows you to store a collection of value
 * **Arrays Method**
   *  **map**
   The **map()** method in JavaScript is used to create a new array by applying a given function to each element of an existing array.
+  
    ![array-map](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Hebron-University/assets/7718220/6fc29827-6704-4a31-8a9d-771ac895f41e)
 
 
