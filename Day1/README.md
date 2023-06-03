@@ -319,3 +319,29 @@ In JavaScript, arrow functions were introduced in ES6 as a new way to write func
     console.log(all) 
     // { name: 'yakoob', age: 32, mark: 80, city: 'hebron' }
     ```
+    
+ * **Destructuring**
+     
+     Destructuring is a feature in JavaScript that allows you to extract data from arrays and objects and assign them to variables.
+  1. **Array Destructuring**
+  
+      ```jsx
+        const numbers = [1, 2, 3, 4];
+
+        const [a, b, c, d] = numbers;
+
+        console.log(a); // output: 1
+        console.log(b); // output: 2
+        console.log(c); // output: 3
+        console.log(d); // output: 4
+      ```
+   2. **Object Destructuring**
+      ```jsx
+        const person = { name: 'yakoob', age: 32, gender: 'male' };
+
+        const { name, age, gender } = person;
+
+        console.log(name); // output: "yakoob"
+        console.log(age); // output: 32
+        console.log(gender); // output: "male"
+      ```
