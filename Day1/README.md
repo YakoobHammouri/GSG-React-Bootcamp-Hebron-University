@@ -183,10 +183,10 @@ array is a special type of object that allows you to store a collection of value
    ![array-map](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Hebron-University/assets/7718220/6fc29827-6704-4a31-8a9d-771ac895f41e)
 
 
-        ```jsx
+    ```jsx
 
         function double (number) {
-          return number * 2;
+           return number * 2;
         }
 
         function tripate (number) {
@@ -209,7 +209,7 @@ array is a special type of object that allows you to store a collection of value
         // Outputting the mapped array
         console.log(tripateArray);
 
-        ```
+    ```
 
     * **filter**
    the **filter()** method is a built-in array function that creates a new array containing elements from the original array that meet a specific condition. It allows you to filter out elements based on a provided function.
@@ -287,3 +287,35 @@ In JavaScript, arrow functions were introduced in ES6 as a new way to write func
           
        const  checkLength = fruit => fruit.length >= 5;
         ```
+* **Spread** *(...)*
+   
+   three dots  is used to expand elements from an iterable (such as an array or a string) into individual elements.
+ 
+     ```jsx
+    const arr1 = [1, 2, 3];
+    const arr2 = [...arr1, 4, 5];
+    console.log(arr2); // Output: [1, 2, 3, 4, 5]
+     ```    
+     ```jsx
+    const numbers = [1, 2, 3, 4];
+    const [a, b, ...rest] = numbers;
+    console.log(a); // output: 1
+    console.log(b); // output: 2
+    console.log(rest); // output: [3, 4]
+     ```
+     
+     ```jsx
+    const arr1 = [1, 2, 3];
+    const arr2 = [4, 5, 6];
+    const combined = [...arr1, ...arr2];
+
+    console.log(combined); // output: [1, 2, 3, 4, 5, 6]
+     ```
+     ```jsx
+    const student = { name : "yakoob", age : 32 ,mark : 80 }
+    const address = {city : "hebron",}
+    const all = {...student , ...address }
+
+    console.log(all) 
+    // { name: 'yakoob', age: 32, mark: 80, city: 'hebron' }
+    ```
