@@ -178,8 +178,9 @@ array is a special type of object that allows you to store a collection of value
     ```
 * **Arrays Method**
   *  **map**
-  The **map()** method in JavaScript is used to create a new array by applying a given function to each element of an existing array. 
-![](https://hackmd.io/_uploads/S1SEcjvUn.png)
+  The **map()** method in JavaScript is used to create a new array by applying a given function to each element of an existing array.
+  ![array-map](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Hebron-University/assets/7718220/6fc29827-6704-4a31-8a9d-771ac895f41e)
+
 
         ```jsx
 
@@ -211,7 +212,9 @@ array is a special type of object that allows you to store a collection of value
 
     * **filter**
    the **filter()** method is a built-in array function that creates a new array containing elements from the original array that meet a specific condition. It allows you to filter out elements based on a provided function.
- ![](https://hackmd.io/_uploads/rkgFhiwUh.png)
+ 
+ ![filter-cover](https://github.com/YakoobHammouri/GSG-React-Bootcamp-Hebron-University/assets/7718220/1bae798b-e5a4-4189-9bb8-404d852e6ede)
+
       ```jsx
 
         function isEven  (number) {
