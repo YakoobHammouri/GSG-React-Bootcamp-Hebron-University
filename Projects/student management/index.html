@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="div1">
+            <form>
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id">
+
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName">
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName">
+
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age">
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber">
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+
+                <label for="major">Major:</label>
+                <input type="text" id="major" name="major">
+
+                <label for="yearOfStudy">Year of Study:</label>
+                <input type="text" id="yearOfStudy" name="yearOfStudy">
+
+                <label for="status">Status:</label>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="div2">
+
+            <div class="div-table">
+                <div>
+                    <h2>Filtering Student </h2>
+
+                    <div>
+                        <p style="    margin: 0;padding: 0;">Filter by Age </p>
+                        <input type="text" id="filter-age" name="age" style="margin-top: 8px;">
+                        <p style="    margin: 0;padding: 0;">Filter by Major </p>
+                        <input type="text" id="filter-major" name="major" style="margin-top: 8px;">
+                    </div>
+                    <div>
+                        <button onclick="">Filter</button>
+                    </div>
+                </div>
+                <div style="border: 2px double #323132;  margin-top: 25px; margin-bottom: 25px;"></div>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Jane Smith</td>
+                                <td>
+                                    <button onclick="">Activate</button>
+                                    <button onclick="showStudent(1)">Show Data</button>
+                                    <button onclick="">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>John Doe</td>
+                                <td>
+                                    <button onclick="">Activate</button>
+                                    <button onclick="showStudent(2)">Show Data</button>
+                                    <button onclick="">Delete</button>
+                                </td>
+                            </tr>
+                            <!-- Add more rows for other students -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="div-data">
+                <div id="std-data" class="student-data display-none">
+                    <h2>Student Information</h2>
+                    <p><strong>ID:</strong> <span id="id">2</span></p>
+                    <p><strong>First Name:</strong> <span id="firstName">John</span></p>
+                    <p><strong>Last Name:</strong> <span id="lastName">Doe</span></p>
+                    <p><strong>Age:</strong> <span id="age">20</span></p>
+                    <p><strong>Gender:</strong> <span id="gender">Male</span></p>
+                    <p><strong>Email:</strong> <span id="email">johndoe@example.com</span></p>
+                    <p><strong>Phone Number:</strong> <span id="phoneNumber">123-456-7890</span></p>
+                    <p><strong>Address:</strong> <span id="address">123 Main Street</span></p>
+                    <p><strong>Major:</strong> <span id="major">Computer Science</span></p>
+                    <p><strong>Year of Study:</strong> <span id="yearOfStudy">2</span></p>
+                    <p><strong>Status:</strong> <span id="status">Active</span></p>
+                    <p><strong>Is Deleted:</strong> <span id="isDelete">false</span></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
