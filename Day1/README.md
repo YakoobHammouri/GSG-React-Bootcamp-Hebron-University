@@ -1,6 +1,6 @@
 # React js Bootcamp Hebron 
 
-## Day 1
+# Day 1
 * **Types of data (Primitive types , object types)**
 In JavaScript, there are two main categories of data types: **primitive types** and **object types**.
     1. **Primitive Types:**

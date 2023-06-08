@@ -1,6 +1,6 @@
 # React js Bootcamp Hebron 
 
-## Day 2
+# Day 2
 
 ## What is the React  
 
