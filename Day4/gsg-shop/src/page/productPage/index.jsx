@@ -1,11 +1,12 @@
-import "./style.css";
 import React, { useEffect, useState } from "react";
-import ProductList from "./../../Data/productList";
-import CategoryList from "./../../Data/categoryList";
-import BranList from "./../../Data/branList";
-import ProductCard from "../../components/productCard";
+import "./style.css";
+import ProductCard from "./../../components/productCard";
+import productList from "../../Data/productList";
+import categoryList from "../../Data/categoryList";
+import branList from "../../Data/branList";
+
 const ProductPage = () => {
-  const [products, setProducts] = useState(ProductList);
+  const [filterProducts, setFilterProducts] = useState([]);
   const [categoryFilter, setCategoryFilter] = useState("");
   const [brandFilter, setBrandFilter] = useState("");
 
@@ -19,42 +20,55 @@ const ProductPage = () => {
   // run in init render
   useEffect(() => {
     console.log("Hi From  use Effect with []");
+    setFilterProducts(productList);
   }, []);
 
   // using three with  [state]
-  // run in when the state change
+  // run in when the categoryFilter state change
+
   useEffect(() => {
-    console.log("Hi From  use Effect with category Filter");
+    const temp = productList?.filter((product) => {
+      if (categoryFilter === "") {
+        return true;
+      } else {
+        return product?.category === categoryFilter;
+      }
+    });
+    console.log("categoryFilter 111111111 : ", temp);
+    setBrandFilter("");
+    setFilterProducts(temp);
   }, [categoryFilter]);
 
-  // console.log(categoryFilter);
-
-  // const productsFilter = products.filter(() => {
-  //   console.log("Hi From Product Filter ");
-  // });
-
-  // const bardnFilter = products.filter(() => {
-  //   console.log("Hi From bardn Filter Filter ");
-  // });
+  // using three with  [state]
+  // run in when the brandFilter state change
+  useEffect(() => {
+    const temp = productList?.filter((product) => {
+      if (brandFilter === "") {
+        return true;
+      } else {
+        return product?.brand === brandFilter;
+      }
+    });
+    console.log("brandFilter 111111111 : ", temp);
+    setCategoryFilter("");
+    setFilterProducts(temp);
+  }, [brandFilter]);
 
   return (
     <div className="product-page">
       <div className="column col-filter">
         <h2>Filters</h2>
         <div className="filter-options">
-          {/* category filter */}
           <select
             value={categoryFilter}
             onChange={(event) => setCategoryFilter(event.target.value)}
           >
-            <option value="">All category</option>
-            {CategoryList.map((item, index) => {
-              return (
-                <option key={index} value={item}>
-                  {item}
-                </option>
-              );
-            })}
+            <option value="">All Brands</option>
+            {categoryList.map((item, index) => (
+              <option key={index} value={item}>
+                {item}
+              </option>
+            ))}
           </select>
 
           {/* Brand filter */}
@@ -62,23 +76,21 @@ const ProductPage = () => {
             value={brandFilter}
             onChange={(event) => setBrandFilter(event.target.value)}
           >
-            <option value="">All brand</option>
-            {BranList.map((item, index) => {
-              return (
-                <option key={index} value={item}>
-                  {item}
-                </option>
-              );
-            })}
+            <option value="">All Brands</option>
+            {branList.map((item, index) => (
+              <option key={index} value={item}>
+                {item}
+              </option>
+            ))}
           </select>
         </div>
       </div>
       <div className="column col-product">
         <h2>Product List</h2>
         <div className="product-list">
-          {products.map((product) => {
-            return <ProductCard key={product.id} product={product} />;
-          })}
+          {filterProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
         </div>
       </div>
     </div>
